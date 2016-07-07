@@ -164,6 +164,7 @@
 		var element = document.getElementById('resultado_coordenadas');			
 	}
 	function calculateAndDisplayRoute(directionsService, directionsDisplay,lugar) {
+	    /*Con selectesMode cogemos la variable que nos indica el medio de transporte*/
 	      var selectedMode = document.getElementById('mode').value;
 		
 		 if(lugar=='donosti'){
@@ -173,7 +174,7 @@
 				var end=[43.3218143,-1.9760336];
 				}
 				
-			  /*Cogemos las coordenadas */
+	 /*Cogemos las coordenadas acutales */
 	   var start =	new google.maps.LatLng(lat_actual,log_actual);
 	  directionsService.route({
 		origin: {lat: end[0], lng:end[1]},  // 
